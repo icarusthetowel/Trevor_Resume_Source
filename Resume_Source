@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Trevor Matthias Bercich</title>
+	<!-- please do not judge for the in-line styling its just makes it easier to share just one file :? -->
+	<! i also know this is a bit extra for a resume. i just wanted to show off my skills and creativity through my code/content -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400vh;
+            margin: 0;
+        }
+        .container {
+            width: 850px;
+            background: #f6f1a0;
+            display: flex;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar {
+            background: #007BFF;
+            width: 250px;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar h1 {
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+        .sidebar p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+        }
+        .content {
+            padding: 20px;
+            flex: 1;
+        }
+        .content h2 {
+            color: #007BFF;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .content h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .content p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .content ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Trevor Matthias Bercich</h1>
+            <p>7357 Tiercel Dr, Ooltewah, TN 37363</p>
+            <p>Email: Trevorbercich@gmail.com</p>
+			<span>Email:trevor.b@aiomnihardware.org</span>
+            <p>Phone: (904) 770-6700</p>
+            <p>LinkedIn: linkedin.com/in/trevor-bercich</p>
+            <p>Website: <a href="aiomnihardware.org" style="color: white; text-decoration: none;">aiomnihardware.org</a></p>  
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> C, C++, Python, JavaScript, Kotlin, HTML, CSS, js, TypeScript, java, SQL, Swift, PHP, ruby, and Lua</li>
+                <li><strong>Frameworks:</strong> React, React Native, AI/ML Stack, styling: css-in-JS(styled components, and emotion), sass, and tailwind CSS.</li>
+                <li><strong>AI Specialties:</strong> NNMs, LLMs, Robotics Frameworks, training, deep machine learning including tenserflow and the python libraries E.g pytorch, keras and creation manipulation of architecture.</li>
+                <li><strong>Backend development</strong> python:django, flask, fastAPI, javascript: typescript, and node.js
+                additionally c#:ASP.NET core</li>
+                <li><strong>Architecture:</strong> Scalable Systems, Design Patterns. APis: REST, GraphQL, passport.js</li>
+                <li><strong>DevOps:</strong> CI/CD, Performance Optimization</li>
+                <li><strong>Security:</strong> Secure Coding, Compliance Standards</li>
+                <li><strong>Tools:</strong> Git, Docker, Kubernetes, AWS, GCP, Azure, Jenkins, CircleCI, TravisCI, atom, windsurf, visual studo code/insider confrotable skilled wiht mode text/code editors</li>
+                <li><strong>Methodologies:</strong> Agile, Scrum, Kanban, lean, </li> 
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Professional Summary</h2>
+            <p>Innovative and versatile Software Engineer with expertise in AI development, deep learning, and full-stack development. I create scalable software architectures for diverse projects, 
+			including advanced AI solutions, while utilizing design patterns across multiple languages (C, C++, JavaScript, Node.js, React, and more). I write efficient, clean code for both front-end and back-end, seamlessly integrating AI models such as NNMs, LLMs, and robotics frameworks. I mentor teams, uphold code quality, conduct reviews, 
+			and champion AI-driven development. I keep current with emerging tools, frameworks, and research, offering strategic guidance on tech stacks to ensure optimal scalability. I collaborate with stakeholders to define requirements, plan realistic timelines, and coordinate cross-functional teams, delivering complex features on schedule. My process includes performance optimization, proactive troubleshooting, and rigorous testing.
+			I document technical details thoroughly and share insights to foster continuous learning, while prioritizing secure coding and compliance with evolving data protection standards. Founder of a multimedia tech company specializing in AI-powered applications and business solutions. Accomplished music thoery instructor and computer science educator, has only adanced me further  </p>
+            
+            <h2>Work Experience</h2>
+            <h3>Senior Software Engineer/Co-Founder - Omni-Hardware-Optimized</h3>
+            <span>2021–Current</span>
+            <ul>
+                <li>Designed and developed proprietary AI models and scalable architectures for private users, few businesses and internal expansion.</li>
+                <li>Developed an AI-powered real-time scalable inventory management and data processing system and software</li>
+                <li>Implemented real-time analytics dashboard using React/Node.js.</li>
+                <li>Led and managed projects and teams focused on problem solving and developing innovative solutions</li>
+                
+                </li>
+            </ul>
+            <h3>Music Instructor – Asbury Arts Center of South Florida(https://www.asburyartscenter.com)</h3>
+			<span>phone:(904)-406-4161</span>
+            <span>10/11/2024 – 02/15/2025</span>
+            <ul>
+                <li>Preferred instructor for piano and guitar with strong student retention.</li>
+                <li>Developed engaging and personalized teaching methods.</li>
+                <li>Consistently received high praise for teaching effectiveness.</li>
+				<li>Skill in adapting to accomadate all ages and learning styles.</li>
+				
+            </ul>
+           
+            <h3>Sales/Inventory Management – SS Smoke & Vape Inc</h3>
+            <span>12/16/2020 – 01/29/2024</span>
+            <ul>
+                <li>Promoted to manager due to leadership, customer service, and efficiency.</li>
+                <li>Optimized inventory management and minimized shrinkage.</li>
+                <li>Built strong customer relationships, increasing loyalty and revenue.</li>
+                <li>Implemented data-driven decision-making processes, to automate stock management and orders. using AI</li>
+            </ul>
+
+            <h2>Education</h2>
+                <ul>
+                    <li>Oakleaf High School – Diploma, Class of 2013</li>
+                    <li>Florida State College at Jacksonville (FSCJ) – Pursuing Bachelor's Degree</li>
+						<ul>
+							<li>CTS 1133C – Software Configuration</li>
+							<li>COP 1000C – Introduction to Computer Programming</li>
+							<li>CTS 1120C – Fundamentals of Information Security</li>
+							<li>COP 2822C – Web Technologies</li>
+							<li>COP 2034C – Programming in Python</li>
+							<li>COP 2334C – Object-Oriented Programming with C++</li>
+							<li>COP 2360C – Introduction to C#</li>
+							<li>COP 2551C – Introduction to Object-Oriented Programming with Java</li>
+							<li>COP 2842C – Internet Programming</li>
+							
+						</ul>
+										
+						
+                    <li> Audited Harvard OpenCourseWare (OCW) - </li>
+                    <li>CS50x- Introduction to Computer Science</li>
+                    <li> CS50P- Introduction to Programming with Python</li>
+                    <li>CS50R- Introduction to Programming with R</li>
+                    <li>CS50W- Introduction to Web Programming with Python and JavaScript</li>
+                    <li>CS50SQL- Introduction to Database with SQL</li>
+                    <li>CS50- Computer science for Lawyers (and law students)</li>
+                    <li> CS50T- Understanding Technology</li>
+                    <li>CS50AI- Introduction to Artificial Intelligence with Python</li>
+            <h2>
+                references </h2>
+					<ul>
+					   <li>James Owens(423) 889 7017 (project manager private project</li>
+					   <li>Osama Saman(904)990 5000 Owner of "ss smoke and vape.inc" and sam's auto repair and tire:7444 lem turner rd, jacksonville FL</li>
+					   <li></li>
+					</ul>
+                </ul>
+        </div>
+    </div>
+</body>
+</html>
