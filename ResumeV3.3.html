@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Resume — Trevor Matthias Bercich</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --text:#222;
+      --muted:#555;
+      --rule:#e5e7eb;
+      --accent:#111;
+      --trim:#2563eb; /* blue trim color */
+    }
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:#ffffff; /* keep white */
+      line-height:1.55;
+    }
+    .page{
+      max-width: 900px;
+      margin: 28px auto 64px;
+      padding: 0 20px;
+      position: relative; /* for the right-side trim */
+    }
+    /* Right-side blue trim — now 3x thicker (18px) */
+    .page::after{
+      content:"";
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:6px;
+      width:18px;               /* was 6px */
+      background:var(--trim);
+      border-radius:10px;
+      pointer-events:none;
+    }
+
+    header{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:10px;
+      border-bottom:1px solid var(--rule);
+      padding-bottom:10px;
+      margin-bottom:18px;
+    }
+    h1{
+      font-size: 1.9rem;
+      letter-spacing:.2px;
+      margin:0;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    /* Easter-yellow stripe behind the name */
+    .name-title{
+      position: relative;
+      display: inline-block; /* keep stripe height tied to the text */
+      z-index: 1;            /* keep text above the stripe */
+    }
+    .name-title::before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* center vertically and horizontally */
+      width: 100vw;                      /* full page width */
+      height: 1.2em;                     /* slightly taller than the font size */
+      background: #FFE36E;               /* Easter yellow */
+      border-radius: 4px;                 /* soften edges */
+      z-index: -1;                        /* place behind the text */
+      pointer-events: none;
+    }
+    .contact{
+      font-size:.95rem;
+      color:var(--muted);
+    }
+    .contact a{color:inherit;text-decoration:none}
+    .section{
+      margin: 18px 0 12px;
+      padding-top: 6px;
+    }
+    .section h2{
+      font-size:1.05rem;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      margin:0 0 8px;
+      font-weight:700;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap:12px 24px;
+    }
+    ul{margin:6px 0 0 18px}
+    li{margin:2px 0}
+    .block{margin:6px 0}
+    .job{
+      margin:10px 0 12px;
+      padding-bottom:10px;
+      border-bottom:1px dashed var(--rule);
+    }
+    .job:last-child{border-bottom:0}
+    .job .title{font-weight:700}
+    .job .meta{color:var(--muted);font-size:.95rem}
+    .edu-list .course{margin-left:16px}
+    .refs ul{list-style:none;margin:4px 0 0;padding:0}
+    .refs li{margin:6px 0}
+    footer{
+      margin-top:22px;
+      padding-top:10px;
+      border-top:1px solid var(--rule);
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    /* ===== Print to ONE Letter page ===== */
+    @media print {
+      @page { size: Letter; margin: 0.4in; }           /* US Letter, modest margins */
+      html, body { height:auto !important; }
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        zoom: 0.92;                                    /* shrink-to-fit nudge */
+      }
+      .page{
+        max-width: none;
+        width: 7.7in;                                  /* content width inside margins */
+        margin: 0;
+        padding: 0.2in 0.25in;                         /* keep layout feel, tighter for print */
+        position: relative;
+      }
+      header, .section, footer, .job, .edu-list{
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { orphans:2; widows:2; }
+      /* Keep the blue trim in print */
+      .page::after{
+        right: 0.1in;
+        width: 0.25in;                                 /* ~18px equivalent on print */
+        background: var(--trim) !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <header>
+  <h1 class="name-title">Trevor Matthias Bercich</h1>
+      <div class="contact">
+        7357 Tiercel Dr, Ooltewah, TN 37363 ·
+        Email: <a href="mailto:Trevorbercich@gmail.com">Trevorbercich@gmail.com</a> |
+        <a href="mailto:trevor.b@aiomnihardware.org">trevor.b@aiomnihardware.org</a> ·
+        Phone: <a href="tel:+19047706700">(904) 770-6700</a> ·
+        LinkedIn: <a href="https://linkedin.com/in/trevor-bercich" target="_blank" rel="noopener">linkedin.com/in/trevor-bercich</a> ·
+        Website: <a href="https://aiomnihardware.org" target="_blank" rel="noopener">aiomnihardware.org</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Technical Skills</h2>
+      <div class="grid-2">
+        <div>
+          <div class="block"><strong>Languages:</strong> C, C++, Python, JavaScript, Kotlin, HTML, CSS, js, TypeScript, java, SQL, Swift, PHP, ruby, and Lua</div>
+          <div class="block"><strong>Frameworks:</strong> React, React Native, AI/ML Stack, TensorFlow, Exspress.js, Styled components, Firebase, sass, tailwind CSS, Vue.js, Next.js</div>
+          <div class="block"><strong>AI Specialties:</strong> NNMs, LLMs, Robotics Frameworks, training, deep machine learning including tenserflow and the python libraries E.g pytorch, keras and creation manipulation of architecture.</div>
+        </div>
+        <div>
+          <div class="block"><strong>Backend development</strong><br>python: django, flask, fastAPI,<br>javascript: typescript, node, exspress.js, ruby on rails and nestJS. additionally<br>c#: ASP.NET core</div>
+          <div class="block"><strong>Architecture:</strong> Scalable Systems, Design Patterns.</div>
+          <div class="block"><strong>APis:</strong> REST, GraphQL, passport.js</div>
+          <div class="block"><strong>DevOps:</strong> CI/CD, Vercel, firebase Performance Optimization</div>
+          <div class="block"><strong>Security:</strong> Secure Coding, Compliance Standards</div>
+          <div class="block"><strong>Tools:</strong> Git, Docker, Kubernetes, AWS, GCP, Azure, Jenkins, CircleCI, TravisCI, atom, windsurf, visual studo code/insider confrotable skilled wiht mode text/code editors</div>
+          <div class="block"><strong>Methodologies:</strong> Agile, Scrum, Kanban, lean</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Professional Summary</h2>
+      <p>
+        Innovative Software Engineer specializing in Python, JavaScript, and TypeScript,
+        with expertise in AI development, deep learning, and full-stack solutions. Skilled in
+        C, C++, Node.js, React, and rapidly adapting to new languages and frameworks.
+        Experienced in designing scalable architectures, integrating NNMs, LLMs, and
+        robotics frameworks, and delivering clean, efficient code across front- and back-end
+        systems. Strong in team mentorship, performance optimization, and secure,
+        compliant development. Founder of a multimedia tech company specializing in AI-
+        powered applications and business solutions.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Work Experience</h2>
+
+      <div class="job">
+        <div class="title">Senior Software Engineer/Co-Founder - Omni-Hardware-Optimized</div>
+        <div class="meta">2022–Current</div>
+        <ul>
+          <li>Engineered pruductivity managment software for music teachers and instructors, to log, track, and review past lessons and progress.</li>
+          <li>Developed an AI-powered real-time scalable inventory management and data processing system and software</li>
+          <li>Managed projects and teams focused on problem solving and developed prorietary LLM for clients and AI powered solutions.</li>
+          <li>Developed a smart thermometer for professional and industrial use.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="title">Music Instructor – Asbury Arts Center of South Florida (<a href="https://www.asburyartscenter.com" target="_blank" rel="noopener">https://www.asburyartscenter.com</a>)</div>
+        <div class="meta">phone:(904)-406-4161 &nbsp; • &nbsp; 10/11/2024 – 02/15/2025</div>
+        <ul>
+          <li>Preferred instructor for piano and guitar with strong student retention.</li>
+          <li>Developed engaging and personalized teaching methods.</li>
+          <li>Consistently received high praise for teaching effectiveness.</li>
+          <li>Skill in adapting to accomadate all ages and learning styles.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="title">Sales/Inventory Management – SS Smoke &amp; Vape Inc</div>
+        <div class="meta">12/16/2020 – 01/29/2025</div>
+        <ul>
+          <li>Promoted to manager due to leadership, customer service, and efficiency.</li>
+          <li>Optimized inventory management and minimized shrinkage.</li>
+          <li>Built strong customer relationships, increasing loyalty and revenue.</li>
+          <li>Increased profits and efficienty with AI powered inventory system.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="edu-list">
+        <div class="block"><strong>Oakleaf High School</strong> – Diploma, Class of 2013</div>
+        <div class="block"><strong>Florida State College at Jacksonville (FSCJ)</strong> – Pursuing Bachelor's Degree</div>
+        <ul>
+          <li class="course">CTS 1133C – Software Configuration</li>
+          <li class="course">COP 1000C – Introduction to Computer Programming</li>
+          <li class="course">CTS 1120C – Fundamentals of Information Security</li>
+          <li class="course">COP 2822C – Web Technologies</li>
+          <li class="course">COP 2034C – Programming in Python</li>
+          <li class="course">COP 2334C – Object-Oriented Programming with C++</li>
+          <li class="course">COP 2360C – Introduction to C#</li>
+          <li class="course">COP 2551C – Introduction to Object-Oriented Programming with Java</li>
+          <li class="course">COP 2842C – Internet Programming</li>
+          <li class="course">COP 2837C – Introduction to Programming with Visual Basic.NET</li>
+        </ul>
+
+        <div class="block"><strong>Audited Harvard OpenCourseWare (OCW)</strong></div>
+        <ul>
+          <li class="course">CS50x- Introduction to Computer Science</li>
+          <li class="course">CS50P- Introduction to Programming with Python</li>
+          <li class="course">CS50R- Introduction to Programming with R</li>
+          <li class="course">CS50S- Introduction to programming with Scratch</li>
+          <li class="course">CS50SQL- Introduction to Database with SQL</li>
+          <li class="course">CS50- Computer science for Laywers (and law students)</li>
+          <li class="course">CS50T- Understanding Technology</li>
+          <li class="course">CS50AI- Introduction to Artificial Intelligence with Python</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section refs">
+      <h2>references</h2>
+      <ul>
+        <li>-James Owens (423) 889 7017 (project manager private project</li>
+        <li>-Osama Saman (904)990 5000 Owner of "ss smoke and vape.inc" and sam's auto repair and tire:7444 lem turner rd, jacksonville FL</li>
+        <li>-George Morales (contact available upon request)</li>
+      </ul>
+    </section>
+
+    <footer>
+      aiomnihardware.org
+    </footer>
+  </main>
+</body>
+</html>
